@@ -11,6 +11,6 @@
   }
 } */
 
-def call() {
-    sh "echo test"
+def call(def script) {
+     script.println("Donald Trump")
 }
