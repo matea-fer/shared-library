@@ -11,6 +11,17 @@
   }
 } */
 
-def call(def script) {
+/*def call(def script) {
      script.println("Donald Trump")
+}*/
+
+def call(Map config=[:], Closure body) {
+        //git url: "https://github.com/werne2j/sample-nodejs"
+        stage("Deploy") {
+            if (config.deploy) {
+                println('Config deploy is true')
+            }
+        }
+        body()
+    }
 }
