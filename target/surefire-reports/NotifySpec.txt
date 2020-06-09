@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: NotifySpec
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.599 s <<< FAILURE! - in NotifySpec
+[notify] will echo SLACK_MESSAGE if type is slack(NotifySpec)  Time elapsed: 1.019 s  <<< FAILURE!
+org.spockframework.mock.TooManyInvocationsError: 
+Too many invocations for:
+
+0 * getPipelineMock("echo")(Constants.SLACK_MESSAGE)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * getPipelineMock("echo").call('Sending Slack Notification')   <-- this triggered the error
+
+
+	at NotifySpec.[notify] will echo SLACK_MESSAGE if type is slack(NotifySpec.groovy:13)
+
